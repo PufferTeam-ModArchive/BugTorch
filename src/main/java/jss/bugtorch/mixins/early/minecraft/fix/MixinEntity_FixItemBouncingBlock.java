@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(Entity.class)
-public class MixinEntityItem {
+public class MixinEntity_FixItemBouncingBlock {
     /**
      * @author Myask-sl
      * @reason make items not bounce on stairs/cauldrons/etc. whose selection boxes are full, but collisions aren't

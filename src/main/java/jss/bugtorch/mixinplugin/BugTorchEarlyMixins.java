@@ -55,7 +55,7 @@ public class BugTorchEarlyMixins implements IFMLLoadingPlugin, IEarlyMixinLoader
 			mixins.add("minecraft.backport.MixinItemEnderPearl");
 		}
         if(BugTorchConfig.fixItemBouncingBlock) {
-            mixins.add("minecraft.fix.MixinEntityItem");
+            mixins.add("minecraft.fix.MixinEntity_FixItemBouncingBlock");
         }
 		//Bugfixes
 		if(client && BugTorchConfig.fixAnvilSoundTypeStepSound) {
