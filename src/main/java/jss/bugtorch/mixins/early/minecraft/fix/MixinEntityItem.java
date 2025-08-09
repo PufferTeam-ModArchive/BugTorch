@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 @Mixin(Entity.class)
 public class MixinEntityItem {
     /**
-     * @author Myask
+     * @author Myask-sl
      * @reason make items not bounce on stairs/cauldrons/etc. whose selection boxes are full, but collisions aren't
      * @param original o.return: whether the block has average selection bound box length >= 1
      * @return adjustment to ignore this for items
@@ -17,6 +17,6 @@ public class MixinEntityItem {
     @ModifyExpressionValue(method = "func_145771_j",
         at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;func_147469_q(III)Z", ordinal = 0))
     private boolean dontEjectBySelectionBox(boolean original) {
-        return !((Object)this instanceof EntityItem);
+        return original && !(((Object)this) instanceof EntityItem);
     }
 }
