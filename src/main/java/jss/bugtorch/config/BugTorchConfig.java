@@ -22,6 +22,7 @@ public class BugTorchConfig {
 	public static int showBroadcastSettingsButton;
 	public static int showOpenToLanButton;
 	public static int showSuperSecretSettingsButton;
+    public static boolean replaceItemTossDropAnimation;
 
 	//Mod bugfixes
 	public static boolean fixExtraUtilitiesBlockSounds;
@@ -166,6 +167,7 @@ public class BugTorchConfig {
 		showBroadcastSettingsButton = config.getInt("showBroadcastSettingsButton", categoryTweaks, 1, -1, 1, "Show (1), disable(0), or remove(-1) the Broadcast Settings button in the options menu.");
 		showOpenToLanButton = config.getInt("showOpenToLanButton", categoryTweaks, 1, -1, 1, "Show (1), disable(0), or remove(-1) the Open to LAN button in the escape menu.");
 		showSuperSecretSettingsButton = config.getInt("showSuperSecretSettingsButton", categoryTweaks, 1, -1, 1, "Show (1), disable(0), or remove(-1) the Super Secret Settings button in the options menu.");
+        replaceItemTossDropAnimation = config.getBoolean("replaceItemTossDropAnimation", categoryTweaks, true, "Backport hand swinging when dropping items.");
 
 		//Update old config options
 		if(config.hasKey(categoryTweaks, "removeBroadcastSettingsButton")) {
