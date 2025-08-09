@@ -72,6 +72,7 @@ public class BugTorchConfig {
 	public static boolean fixVillagerTradeMetadataDetection;
 	public static boolean fixVillageSieges;
 	public static boolean fixVillageWellDesertMaterial;
+    public static boolean fixItemBouncingBlock;
 
 	//Mixin performance improvements
 	public static boolean brokenChestsDontSplitStacks;
@@ -241,6 +242,7 @@ public class BugTorchConfig {
 		fixVillagerTradeMetadataDetection = false; config.getBoolean("fixVillagerTradeMetadataDetection", categoryBugfixes, true, "Villager trades will respect metadata.\nCurrently unfinished and disabled internally.\nFrom MC 1.8");
 		fixVillageSieges = config.getBoolean("fixVillageSieges", categoryBugfixes, true, "Zombies will siege villages that are large enough at night.\nFrom MC 1.8, fixes MC-7432 and MC-7488");
 		fixVillageWellDesertMaterial = config.getBoolean("fixVillageWellDesertMaterial", categoryBugfixes, true, "Wells in desert villages will use the correct material.\nFrom MC 1.8, fixes MC-32514");
+        fixItemBouncingBlock = config.getBoolean("fixItemBouncingBlock", categoryBugfixes, true, "Fixes items bouncing on blocks with complicated block bounds like stairs, cauldron and hoppers.");
 		fixLWJGL2OpenALCrash = config.getBoolean("fixLWJGL2OpenALCrash", categoryBugfixes, true, "Fixes the ridiculous bug where the SoundSystem will consistently fail to re/initialize, commonly observed with LWJGL2 nightlies on Linux. Disabled when LWJGL3ify is present.");
 
 		//Performance
