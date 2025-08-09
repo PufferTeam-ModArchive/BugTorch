@@ -27,6 +27,7 @@ public class BugTorchConfig {
 	public static boolean fixExtraUtilitiesBlockSounds;
 	public static boolean fixPamsTemperatePlantsBlockSounds;
 	public static boolean fixWitcheryBlockSounds;
+    public static boolean fixWitcheryBlockLighting;
 
 	//Mod ore dictionary
 	public static boolean registerThaumcraftLeavesToTheOreDictionary;
@@ -186,6 +187,7 @@ public class BugTorchConfig {
 		fixExtraUtilitiesBlockSounds = config.getBoolean("fixExtraUtilitiesBlockSounds", categoryBugfixes, true, "Assigns the correct sound types to some blocks from Extra Utilities.");
 		fixPamsTemperatePlantsBlockSounds = config.getBoolean("fixPamsTemperatePlantsBlockSounds", categoryBugfixes, true, "Assigns the correct sound types to some blocks from Pam's Temperate Plants.");
 		fixWitcheryBlockSounds = config.getBoolean("fixWitcheryBlockSounds", categoryBugfixes, true, "Assigns the correct sound types to some blocks from Witchery.");
+		fixWitcheryBlockLighting = config.getBoolean("fixWitcheryBlockLighting", categoryBugfixes, true, "Fixes stairs and slabs having dark lighting.");
 
 		//Ore dictionary
 		registerThaumcraftLeavesToTheOreDictionary = config.getBoolean("registerThaumcraftLeavesToTheOreDictionary", categoryOreDictionary, true, "Register Thaumcraft Greatwood and Silverwood leaves as treeLeaves.");
