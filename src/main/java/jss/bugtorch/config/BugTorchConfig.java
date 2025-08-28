@@ -74,6 +74,8 @@ public class BugTorchConfig {
 	public static boolean fixVillageWellDesertMaterial;
     public static boolean fixItemBouncingBlock;
     public static boolean fixBlockFenceAnim;
+    public static boolean fixRedstoneWireBlockBounds;
+    public static boolean fixItemRedstoneAnim;
 
 	//Mixin performance improvements
 	public static boolean brokenChestsDontSplitStacks;
@@ -245,7 +247,10 @@ public class BugTorchConfig {
 		fixVillageWellDesertMaterial = config.getBoolean("fixVillageWellDesertMaterial", categoryBugfixes, true, "Wells in desert villages will use the correct material.\nFrom MC 1.8, fixes MC-32514");
         fixItemBouncingBlock = config.getBoolean("fixItemBouncingBlock", categoryBugfixes, true, "Fixes items bouncing on blocks with complicated block bounds like stairs, cauldron and hoppers.");
         fixBlockFenceAnim = config.getBoolean("fixBlockFenceAnim", categoryBugfixes, true, "Fixes right click animation triggering when right clicking a fence even if nothing happens.");
-		fixLWJGL2OpenALCrash = config.getBoolean("fixLWJGL2OpenALCrash", categoryBugfixes, true, "Fixes the ridiculous bug where the SoundSystem will consistently fail to re/initialize, commonly observed with LWJGL2 nightlies on Linux. Disabled when LWJGL3ify is present.");
+        fixRedstoneWireBlockBounds = config.getBoolean("fixRedstoneWireBlockBounds", categoryBugfixes, true, "Fix redstone wires having inaccurate block bounds.");
+        fixItemRedstoneAnim = config.getBoolean("fixItemRedstoneAnim", categoryBugfixes, true, "Fixes right click animation triggering when right clicking a redstone dust even if nothing happens.");
+
+        fixLWJGL2OpenALCrash = config.getBoolean("fixLWJGL2OpenALCrash", categoryBugfixes, true, "Fixes the ridiculous bug where the SoundSystem will consistently fail to re/initialize, commonly observed with LWJGL2 nightlies on Linux. Disabled when LWJGL3ify is present.");
 
 		//Performance
 		brokenChestsDontSplitStacks = config.getBoolean("brokenChestsDontSplitStacks", categoryPerformance, false, "Broken chests don't split apart dropped item stacks.");
