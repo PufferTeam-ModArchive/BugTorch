@@ -76,6 +76,7 @@ public class BugTorchConfig {
     public static boolean fixBlockFenceAnim;
     public static boolean fixRedstoneWireBlockBounds;
     public static boolean fixItemRedstoneAnim;
+    public static boolean fixItemSlabAnim;
 
 	//Mixin performance improvements
 	public static boolean brokenChestsDontSplitStacks;
@@ -249,6 +250,7 @@ public class BugTorchConfig {
         fixBlockFenceAnim = config.getBoolean("fixBlockFenceAnim", categoryBugfixes, true, "Fixes right click animation triggering when right clicking a fence even if nothing happens.");
         fixRedstoneWireBlockBounds = config.getBoolean("fixRedstoneWireBlockBounds", categoryBugfixes, true, "Fix redstone wires having inaccurate block bounds.");
         fixItemRedstoneAnim = config.getBoolean("fixItemRedstoneAnim", categoryBugfixes, true, "Fixes right click animation triggering when right clicking a redstone dust even if nothing happens.");
+        fixItemSlabAnim = config.getBoolean("fixItemSlabAnim", categoryBugfixes, true, "Fixes right click animation triggering when right clicking a slab even if nothing happens.");
 
         fixLWJGL2OpenALCrash = config.getBoolean("fixLWJGL2OpenALCrash", categoryBugfixes, true, "Fixes the ridiculous bug where the SoundSystem will consistently fail to re/initialize, commonly observed with LWJGL2 nightlies on Linux. Disabled when LWJGL3ify is present.");
 
