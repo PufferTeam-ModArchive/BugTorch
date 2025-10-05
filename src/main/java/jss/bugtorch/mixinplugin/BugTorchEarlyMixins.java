@@ -57,16 +57,16 @@ public class BugTorchEarlyMixins implements IFMLLoadingPlugin, IEarlyMixinLoader
         if(BugTorchConfig.fixItemBouncingBlock) {
             mixins.add("minecraft.fix.MixinEntity_FixItemBouncingBlock");
         }
-        if(BugTorchConfig.fixBlockFenceAnim) {
+        if(client && BugTorchConfig.fixBlockFenceAnim) {
             mixins.add("minecraft.fix.MixinBlockFence");
         }
         if(BugTorchConfig.fixRedstoneWireBlockBounds) {
             mixins.add("minecraft.fix.MixinBlockRedstoneWire");
         }
-        if(BugTorchConfig.fixItemRedstoneAnim) {
+        if(client && BugTorchConfig.fixItemRedstoneAnim) {
             mixins.add("minecraft.fix.MixinItemRedstone");
         }
-        if(BugTorchConfig.fixItemSlabAnim) {
+        if(client && BugTorchConfig.fixItemSlabAnim) {
             mixins.add("minecraft.fix.MixinItemSlab");
         }
 
